@@ -1,7 +1,179 @@
-/*
- * Главный файл стилей.
- * Все паршалы подключаются сюда.
- */
+@import './basicLightbox.min.css';
 
-// Стили для файла с примером HTML-фрагмента
-@import './example';
+$accent-color: #e5f321;
+$btn-color: #ffffff;
+$input-color: #ffffff;
+$btn-hover-bgcolor: #bbf3d9;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.link {
+  display: block;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  font-style: italic;
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  background-color: #33f0b1;
+  background-size: cover;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-right: 25px;
+  padding-left: 25px;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  margin-bottom: 25px;
+}
+
+.input {
+  width: 500px;
+  border: 1px solid rgb(255, 255, 255);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  margin-right: 25px;
+  border-radius: 10px;
+  background-color: inherit;
+  padding: 15px;
+  height: 50px;
+}
+
+.input:focus {
+  outline-color: $accent-color;
+}
+
+.input::placeholder {
+  color: $input-color;
+}
+
+.btn {
+  min-width: 200px;
+  height: 60px;
+  background-color: $accent-color;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: none;
+  border-radius: 5px;
+
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.87;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $btn-color;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: $btn-hover-bgcolor;
+  cursor: pointer;
+  outline-color: $accent-color;
+}
+
+.load-more {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.photo-card {
+  width: 100%;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background-color: #fff;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.photo-card__item {
+  display: flex;
+  flex-direction: column;
+
+  margin: 15px;
+  width: calc((100% - 8 * 15px) / 4);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.photo-image__wrapper {
+  overflow: hidden;
+}
+
+.photo-image {
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  height: 15vw;
+  transition: transform linear 250ms;
+}
+
+.photo-image:hover {
+  cursor: zoom-in;
+  transform: scale(1.1);
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.stats-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-weight: 400;
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: rgb(0, 0, 0);
+}
+
+.stats-item:not(:last-child) {
+  margin-right: 25px;
+}
+
+.material-icons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  color: $accent-color;
+}
